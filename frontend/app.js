@@ -1,4 +1,4 @@
-// Думаю такие штуки можно самим и не писать.
+//  todo: Scaffolding here, mb move to separate file?
 Vue.component('message', {
     template: `<article class="message">
             <div class="message-header">
@@ -14,9 +14,25 @@ Vue.component('message', {
     props: ['body', 'title'],
 });
 
+// todo: Main Application starts here
 let app = new Vue({
     el: '#app',
     data: {
         message: 'Hello VueJS, Bulma, NodeJS!'
     }
+});
+
+fetch('http://127.0.0.1:3000/items.json').then(
+    function (response) {
+        if (response.status !== 200) {
+            console.log(response);
+            console.log('Looks like there was a problem. Status Code: ' + response.status);
+            return;
+        }
+        response.json().then(function (data) {
+            console.log(data);
+        });
+    }
+).catch(function (err) {
+    console.log('Fetch Error :-S', err);
 });
