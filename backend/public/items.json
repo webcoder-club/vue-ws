@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "title": "iPhone 6",
+      "text": "iPhone 6 description text",
+      "price": 39e3,
+      "category": 1
+    },
+    {
+      "title": "iPhone 7",
+      "text": "iPhone 7 description text",
+      "price": 55e3,
+      "category": 1
+    },
+    {
+      "title": "iPhone 5",
+      "text": "iPhone 5 description text",
+      "price": 20e3,
+      "category": 1
+    }
+  ]
+}
