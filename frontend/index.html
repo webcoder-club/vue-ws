@@ -10,59 +10,35 @@
     <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-
-<section class="hero is-medium is-primary is-bold">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title">
-                VueJS Workshop
-            </h1>
-            <h2 class="subtitle">
-                Demo with Fetching Data, Filter, Sorting On an example of the Avito goods.
-            </h2>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div id="app">
-            <!-- todo: Main Application, remove before workshops -->
-            <h2 class="title is-2">{{ message }}</h2>
-
-            <div class="field has-addons">
-                <p class="control">
-                    <input class="input" type="text" placeholder="Filter">
-                </p>
-                <p class="control">
-                    <a class="button is-primary">
-                        Search
-                    </a>
-                </p>
+    <div id="app">
+        <section class="hero is-medium is-primary is-bold">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        VueJS Workshop
+                    </h1>
+                    <h2 class="subtitle">
+                        Demo with Fetching Data, Filter, Sorting On an example of the Avito goods.
+                    </h2>
+                </div>
             </div>
-
-            <message title="Example 1">Hello World</message>
-            <message title="Example 2">Hello World</message>
-            <message title="Example 3">Hello World</message>
-        </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <!-- todo: Main Application, remove before workshops -->
+                <h2 class="title is-2">{{ message }}</h2>
+                <!-- <Message title="In progress">Content coming soon!</Message> -->
+                <Search></Search>
+                <div class="columns is-multiline" v-if="goods.length">
+                    <Item v-for="item in goods" v-if="~item.title.indexOf(query)" :title="item.title" :seller="item.seller" :price="item.price" :text="item.text" :key="item.id"></Item>
+                </div>
+                <div v-else>
+                    loading...
+                </div>
+            </div>
+        </section>
+        <Bottom></Bottom>
     </div>
-</section>
-
-<footer class="footer">
-    <div class="container">
-        <div class="content has-text-centered">
-            <p>
-                <strong>VueJS Workshop</strong> by Evgeniy Fedyushkin.
-            </p>
-            <p>
-                <a class="icon" href="https://github.com/webcoder-club/vue-ws-beginner">
-                    <i class="fa fa-github"></i>
-                </a>
-            </p>
-        </div>
-    </div>
-</footer>
-
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

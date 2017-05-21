@@ -2,21 +2,35 @@
   "items": [
     {
       "title": "iPhone 6",
-      "text": "iPhone 6 description text",
+      "text": "Bestseller among geeks",
       "price": 39e3,
-      "category": 1
+      "category": 1,
+      "seller": "Ivan Petrov",
+      "id": 1
     },
     {
       "title": "iPhone 7",
-      "text": "iPhone 7 description text",
+      "text": "Bestseller among geeks",
       "price": 55e3,
-      "category": 1
+      "category": 1,
+      "seller": "Joe Doe",
+      "id": 2
     },
     {
       "title": "iPhone 5",
-      "text": "iPhone 5 description text",
+      "text": "Bestseller among geeks",
       "price": 20e3,
-      "category": 1
+      "category": 1,
+      "seller": "Alex Miller",
+      "id": 3
+    },
+    {
+      "title": "iPad",
+      "text": "Bestseller among geeks",
+      "price": 20e3,
+      "category": 1,
+      "seller": "Luk Mcdonald",
+      "id": 4
     }
   ]
 }
