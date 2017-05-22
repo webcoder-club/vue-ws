@@ -1,4 +1,4 @@
-# wp
+# VueJS + NodeJS Workshop by WebcoderClub
 
 ## Build Setup
 

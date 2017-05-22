@@ -1,6 +1,6 @@
 # VueJS Workshop by WebcoderClub
 
-> A Vue.js project
+> A project description + all the thing goes here.
 
 ## Build Setup
 

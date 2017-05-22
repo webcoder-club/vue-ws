@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "VueJS + NodeJS Workshop by WebcoderClub",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
