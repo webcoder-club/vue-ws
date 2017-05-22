@@ -10,35 +10,36 @@
     <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-    <div id="app">
-        <section class="hero is-medium is-primary is-bold">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">
-                        VueJS Workshop
-                    </h1>
-                    <h2 class="subtitle">
-                        Demo with Fetching Data, Filter, Sorting On an example of the Avito goods.
-                    </h2>
-                </div>
-            </div>
-        </section>
-        <section class="section">
+<div id="app">
+    <section class="hero is-medium is-primary is-bold">
+        <div class="hero-body">
             <div class="container">
-                <!-- todo: Main Application, remove before workshops -->
-                <h2 class="title is-2">{{   message }}</h2>
-                <!-- <Message title="In progress">Content coming soon!</Message> -->
-                <Search></Search>
-                <div class="columns is-multiline" v-if="goods.length">
-                    <Item v-for="item in goods" v-if="~item.title.indexOf(query)" :title="item.title" :seller="item.seller" :price="item.price" :text="item.text" :key="item.id"></Item>
-                </div>
-                <div v-else>
-                    loading...
-                </div>
+                <h1 class="title">
+                    VueJS Workshop
+                </h1>
+                <h2 class="subtitle">
+                    Demo with Fetching Data, Filter, Sorting On an example of the Avito goods.
+                </h2>
             </div>
-        </section>
-        <Bottom></Bottom>
-    </div>
-    <script src="/dist/build.js"></script>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <!-- todo: Main Application, remove before workshops -->
+            <h2 class="title is-2">{{ message }}</h2>
+            <!-- <Message title="In progress">Content coming soon!</Message> -->
+            <Search></Search>
+            <div class="columns is-multiline" v-if="goods.length">
+                <Item v-for="item in goods" v-if="~item.title.indexOf(query)" :title="item.title" :seller="item.seller"
+                      :price="item.price" :text="item.text" :key="item.id"></Item>
+            </div>
+            <div v-else>
+                loading...
+            </div>
+        </div>
+    </section>
+    <Bottom></Bottom>
+</div>
+<script src="/dist/build.js"></script>
 </body>
 </html>
