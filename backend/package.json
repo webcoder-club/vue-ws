@@ -1,5 +1,6 @@
 {
-  "name": "VueJS + NodeJS Workshop by WebcoderClub",
+  "name": "VueJS + NodeJS Workshop",
+  "description": "VueJS and NodeJS Workshop Junior level",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
