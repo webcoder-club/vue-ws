@@ -1,5 +1,5 @@
 # VueJS WorkShop
-VueJS Workshop beginner level by Evgeniy Fedyushkin.
+VueJS Workshop beginner level by WebcoderClub.
 
 ## Structure
 * /frontend - VueJS
