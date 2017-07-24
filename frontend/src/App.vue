@@ -45,13 +45,16 @@
             return {
                 message: 'Goods for sell',
                 uploaded: false,
-                url: 'http://127.0.0.1:3000/items.json',
+                server:{
+                    url: 'http://127.0.0.1:3000/items.json',
+                    isOnline: true,
+                },
                 goods: [],
                 query: ''
             }
         },
         mounted() {
-            fetch(this.url).then(
+            fetch(this.server.url).then(
                 (response) => {
                     if (response.status !== 200) {
                         console.log(response);
@@ -67,9 +70,9 @@
                         this.uploaded = true;
                     });
                 }
-            ).catch(function (err) {
-                this.goods = null;
+            ).catch((err) => {
                 console.log('Fetch Error :-S ', err);
+                this.server.isOnline = false;
             });
 
             Event.$on('search', (query) => {
