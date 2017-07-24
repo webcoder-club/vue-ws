@@ -1,60 +1,86 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1></h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
-  </div>
+    <div id="app">
+        <!-- todo: <Main Application>, remove before workshops -->
+        <Top></Top>
+        <section class="section">
+            <div class="container">
+                <h2 class="title is-2">{{ message }}</h2>
+                <!-- <Message title="In progress">Content coming soon!</Message> -->
+                <Search></Search>
+                <div class="columns is-multiline" v-if="goods.length">
+                    <Item v-for="item in goods" v-if="~item.title.indexOf(query)" :title="item.title"
+                          :seller="item.seller"
+                          :price="item.price" :text="item.text" :key="item.id"></Item>
+                </div>
+                <div v-else>
+                    loading...
+                </div>
+            </div>
+        </section>
+        <Bottom></Bottom>
+        <!-- todo: </Main Application>, remove before workshops -->
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    import Vue from 'vue';
+    let Event = new Vue();
+
+    import Bottom from './components/Bottom.vue';
+    import Item from './components/Item.vue';
+    import Message from './components/Message.vue';
+    import Search from './components/Search.vue';
+    import Top from './components/Top.vue';
+
+    export default {
+        name: 'app',
+        components: {
+            Bottom,
+            Item,
+            Message,
+            Search,
+            Top,
+        },
+        data() {
+            return {
+                message: 'Goods for sell',
+                uploaded: false,
+                url: 'http://127.0.0.1:3000/items.json',
+                goods: [],
+                query: ''
+            }
+        },
+        mounted() {
+            fetch(this.url).then(
+                (response) => {
+                    if (response.status !== 200) {
+                        console.log(response);
+                        console.log('Looks like there was a problem. Status Code: ' + response.status);
+                        return;
+                    }
+                    response.json().then((response) => {
+                        if (response.items) {
+                            this.goods = response.items;
+                        } else {
+                            this.goods = null;
+                        }
+                        this.uploaded = true;
+                    });
+                }
+            ).catch(function (err) {
+                this.goods = null;
+                console.log('Fetch Error :-S ', err);
+            });
+
+            Event.$on('search', (query) => {
+                this.query = query;
+            });
+        }
     }
-  }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+    /*
+    todo: add some style
+    */
 </style>

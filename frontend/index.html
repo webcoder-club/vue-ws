@@ -9,25 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div id="app">
-    <!-- todo: Main Application, remove before workshops -->
-    <Top></Top>
-    <section class="section">
-        <div class="container">
-            <h2 class="title is-2">{{ message }}</h2>
-            <!-- <Message title="In progress">Content coming soon!</Message> -->
-            <Search></Search>
-            <div class="columns is-multiline" v-if="goods.length">
-                <Item v-for="item in goods" v-if="~item.title.indexOf(query)" :title="item.title" :seller="item.seller"
-                      :price="item.price" :text="item.text" :key="item.id"></Item>
-            </div>
-            <div v-else>
-                loading...
-            </div>
-        </div>
-    </section>
-    <Bottom></Bottom>
-</div>
+
+<div id="app"></div>
+
 <script src="/dist/build.js"></script>
 </body>
 </html>

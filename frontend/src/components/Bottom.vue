@@ -6,7 +6,7 @@
                     <strong>VueJS Workshop</strong>.
                 </p>
                 <p>
-                    <a class="icon" href="https://github.com/webcoder-club/vue-ws-junior">
+                    <a class="icon" href="https://github.com/webcoder-club/vue-ws-middle">
                         <i class="fa fa-github"></i>
                     </a>
                 </p>

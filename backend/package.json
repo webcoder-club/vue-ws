@@ -1,6 +1,6 @@
 {
-  "name": "VueJS + NodeJS Workshop",
-  "description": "VueJS and NodeJS Workshop Junior level",
+  "name": "vue-middle-back",
+  "description": "VueJS and NodeJS Workshop Middle level",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
