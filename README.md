@@ -1,5 +1,5 @@
 # VueJS WorkShop
-VueJS Workshop Junior level by WebcoderClub.
+VueJS Workshop Middle level by WebCoderClub.
 
 ## Structure
 * [/frontend](frontend) - VueJS
