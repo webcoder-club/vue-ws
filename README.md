@@ -2,8 +2,8 @@
 VueJS Workshop Junior level by WebcoderClub.
 
 ## Structure
-* /frontend - VueJS
-* /backend - NodeJS
+* [/frontend](frontend) - VueJS
+* [/backend](backend) - NodeJS
 
 ## Author
 * [Evgeniy Fedyushkin](https://github.com/fedot-ost)
