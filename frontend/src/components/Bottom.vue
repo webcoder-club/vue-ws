@@ -3,7 +3,7 @@
         <div class="container">
             <div class="content has-text-centered">
                 <p>
-                    <strong>VueJS Workshop</strong>.
+                    <strong>WebCoder</strong>.
                 </p>
                 <p>
                     <a class="icon" href="https://github.com/webcoder-club/vue-ws-middle">

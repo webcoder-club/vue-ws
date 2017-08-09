@@ -6,7 +6,7 @@
             <div class="container">
                 <h2 class="title is-2">{{ message }}</h2>
                 <!-- <Message title="In progress">Content coming soon!</Message> -->
-                <Search></Search>
+                <Search :Event="Event"></Search>
                 <div class="columns is-multiline" v-if="goods.length">
                     <Item v-for="item in goods" v-if="~item.title.indexOf(query)" :title="item.title"
                           :seller="item.seller"
@@ -50,7 +50,8 @@
                     isOnline: true,
                 },
                 goods: [],
-                query: ''
+                query: '',
+                Event
             }
         },
         mounted() {
@@ -83,7 +84,14 @@
 </script>
 
 <style>
-    /*
-    todo: add some style
-    */
+    html,
+    body {
+        height: 100%;
+    }
+    #app {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+    }
 </style>

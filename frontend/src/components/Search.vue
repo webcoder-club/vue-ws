@@ -4,7 +4,7 @@
             <input v-model="query" class="input" type="text" placeholder="Filter">
         </p>
         <p class="control">
-            <a class="button is-primary" v-on:click="search">
+            <a class="button is-info" v-on:click="search">
                 Search
             </a>
         </p>
@@ -14,6 +14,11 @@
 <script>
     export default {
         name: 'search',
+        props: {
+            Event: {
+                type: Object
+            }
+        },
         data() {
             return {
                 query: ''
@@ -21,7 +26,7 @@
         },
         methods: {
             search() {
-                Event.$emit('search', this.query);
+                this.Event.$emit('search', this.query);
             }
         }
     }
