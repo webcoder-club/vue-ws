@@ -9,7 +9,8 @@
                 <Search :Event="Event"></Search>
                 <div class="columns is-multiline" v-if="goods.length">
                     <Item v-for="item in goods" v-if="~item.title.indexOf(query)" :title="item.title"
-                          :seller="item.seller"
+                          :category="item.category"
+                          :image = "item.image"
                           :price="item.price" :text="item.text" :key="item.id"></Item>
                 </div>
                 <div v-else>
