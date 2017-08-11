@@ -7,14 +7,17 @@
                 <h2 class="title is-2">{{ message }}</h2>
                 <!-- <Message title="In progress">Content coming soon!</Message> -->
                 <Search :Event="Event"></Search>
-                <div class="columns is-multiline" v-if="goods.length">
-                    <Item v-for="item in goods" v-if="~item.title.indexOf(query)" :title="item.title"
+                <div class="columns is-multiline" v-if="searchResults.length">
+                    <Item v-for="item in searchResults" :title="item.title"
                           :category="item.category"
                           :image = "item.image"
                           :price="item.price" :text="item.text" :key="item.id"></Item>
                 </div>
+                <div v-else-if="searchResults.length == 0">
+                    Nothing found...
+                </div>
                 <div v-else>
-                    loading...
+                    Connection error...
                 </div>
             </div>
         </section>
@@ -51,6 +54,7 @@
                     isOnline: true,
                 },
                 goods: [],
+                searchResults: [],
                 query: '',
                 Event
             }
@@ -66,6 +70,7 @@
                     response.json().then((response) => {
                         if (response.items) {
                             this.goods = response.items;
+                            this.searchResults = response.items;
                         } else {
                             this.goods = null;
                         }
@@ -79,6 +84,7 @@
 
             Event.$on('search', (query) => {
                 this.query = query;
+                this.searchResults = this.goods.filter(item => ~item.title.indexOf(query));
             });
         }
     }

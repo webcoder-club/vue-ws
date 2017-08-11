@@ -67,7 +67,7 @@
     {
       "title": "House 2",
       "text": "The Range Rover is a British made, full-sized luxury sport utility vehicle (SUV) produced by Land Rover, and serves as its flagship model. Land Rover is one of several auto manufacturers owned by Tata Motors, a part of the Indian multinational conglomerate Tata Group.",
-      "price": 2e5,
+      "price": 3e5,
       "category": "Houses",
       "image": "houses/2.jpg",
       "id": 9
@@ -75,7 +75,7 @@
     {
       "title": "House 3",
       "text": "The Range Rover is a British made, full-sized luxury sport utility vehicle (SUV) produced by Land Rover, and serves as its flagship model. Land Rover is one of several auto manufacturers owned by Tata Motors, a part of the Indian multinational conglomerate Tata Group.",
-      "price": 2e5,
+      "price": 4e5,
       "category": "Houses",
       "image": "houses/3.jpg",
       "id": 10
