@@ -6,7 +6,7 @@
                     <strong>WebCoder</strong>.
                 </p>
                 <p>
-                    <a class="icon" href="https://github.com/webcoder-club/vue-ws-middle">
+                    <a class="has-text-info icon" href="https://github.com/webcoder-club/vue-ws-middle">
                         <i class="fa fa-github"></i>
                     </a>
                 </p>

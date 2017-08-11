@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="content">
-                    {{ text }} - {{ title }} for <a>{{ price }}$</a>.
+                    {{ text }} - {{ title }} for <a class="has-text-info">{{ price }}$</a>.
                 </div>
             </div>
         </div>
