@@ -2,35 +2,83 @@
   "items": [
     {
       "title": "iPhone 6",
-      "text": "Bestseller among geeks",
-      "price": 39e3,
-      "category": 1,
-      "seller": "Ivan Petrov",
+      "text": "Apple iPhone 6 smartphone was launched in September 2014. The phone comes with a 4.70-inch touchscreen display with a resolution of 750 pixels by 1334 pixels at a PPI of 326 pixels per inch.",
+      "price": 2e2,
+      "category": "Mobile devices",
+      "image": "mobile-devices/1.jpg",
       "id": 1
     },
     {
       "title": "iPhone 7",
-      "text": "Bestseller among geeks",
-      "price": 55e3,
-      "category": 1,
-      "seller": "Joe Doe",
+      "text": "Apple iPhone 7 smartphone was launched in September 2016. The phone comes with a 4.70-inch touchscreen display with a resolution of 750 pixels by 1334 pixels at a PPI of 326 pixels per inch.",
+      "price": 3e2,
+      "category": "Mobile devices",
+      "image": "mobile-devices/2.jpg",
       "id": 2
     },
     {
-      "title": "iPhone 5",
-      "text": "Bestseller among geeks",
-      "price": 20e3,
-      "category": 1,
-      "seller": "Alex Miller",
+      "title": "iPhone 5s",
+      "text": "Apple iPhone 5s smartphone was launched in September 2013. The phone comes with a 4.00-inch touchscreen display with a resolution of 640 pixels by 1136 pixels at a PPI of 326 pixels per inch.",
+      "price": 1e2,
+      "category": "Mobile devices",
+      "image": "mobile-devices/3.jpg",
       "id": 3
     },
     {
-      "title": "iPad",
-      "text": "Bestseller among geeks",
-      "price": 20e3,
-      "category": 1,
-      "seller": "Luk Mcdonald",
+      "title": "iPad Air 2",
+      "text": "Apple iPad Air 2 Wi-Fi tablet was launched in October 2014. The tablet comes with a 9.70-inch display with a resolution of 1536 pixels by 2048 pixels at a PPI of 264 pixels per inch.",
+      "price": 3e2,
+      "category": "Mobile devices",
+      "image": "mobile-devices/4.jpg",
       "id": 4
+    },
+    {
+      "title": "BMW 5er F10",
+      "text": "The BMW F10 is the sixth generation of the BMW 5 Series, which debuted in November 2009[9] as the successor to the E60 5 Series.",
+      "price": 1e4,
+      "category": "Cars",
+      "image": "cars/1.jpg",
+      "id": 5
+    },
+    {
+      "title": "Ferrari",
+      "text": "The Ferrari F40 is a mid-engine, rear-wheel drive, two-door coupé sports car[4] built from 1987 to 1992, with the LM and GTE race car versions continuing production until 1994 and 1996 respectively.",
+      "price": 1e5,
+      "category": "Cars",
+      "image": "cars/2.jpg",
+      "id": 6
+    },
+    {
+      "title": "Land Rover Range Rover",
+      "text": "The Range Rover is a British made, full-sized luxury sport utility vehicle (SUV) produced by Land Rover, and serves as its flagship model. Land Rover is one of several auto manufacturers owned by Tata Motors, a part of the Indian multinational conglomerate Tata Group.",
+      "price": 2e4,
+      "category": "Cars",
+      "image": "cars/3.jpg",
+      "id": 7
+    },
+    {
+      "title": "House 1",
+      "text": "The Range Rover is a British made, full-sized luxury sport utility vehicle (SUV) produced by Land Rover, and serves as its flagship model. Land Rover is one of several auto manufacturers owned by Tata Motors, a part of the Indian multinational conglomerate Tata Group.",
+      "price": 2e5,
+      "category": "Houses",
+      "image": "houses/1.jpg",
+      "id": 8
+    },
+    {
+      "title": "House 2",
+      "text": "The Range Rover is a British made, full-sized luxury sport utility vehicle (SUV) produced by Land Rover, and serves as its flagship model. Land Rover is one of several auto manufacturers owned by Tata Motors, a part of the Indian multinational conglomerate Tata Group.",
+      "price": 3e5,
+      "category": "Houses",
+      "image": "houses/2.jpg",
+      "id": 9
+    },
+    {
+      "title": "House 3",
+      "text": "The Range Rover is a British made, full-sized luxury sport utility vehicle (SUV) produced by Land Rover, and serves as its flagship model. Land Rover is one of several auto manufacturers owned by Tata Motors, a part of the Indian multinational conglomerate Tata Group.",
+      "price": 4e5,
+      "category": "Houses",
+      "image": "houses/3.jpg",
+      "id": 10
     }
   ]
 }
